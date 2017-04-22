@@ -1,3 +1,4 @@
 from django.contrib import admin
+from wall_post.models import WallPost
 
-# Register your models here.
+admin.site.register(WallPost)

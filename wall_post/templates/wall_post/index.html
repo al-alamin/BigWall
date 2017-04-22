@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title> Big Wall  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container">
+	<h1>Big Wall</h1>
+
+	<br>
+	<form action="" method="post">
+		{% csrf_token %}
+		<input type="text" name="name" placeholder="Name">
+		<input type="text" name="post" placeholder="Post">
+		<input type="submit" name="">
+		
+	</form>
+
+
+<br><br><br><br>
+
+	<ul >
+	    {% for post in wall_post %}
+			<li>name: {{ post.name }} <br> post: {{ post.post }} <br></li> <br>
+		{%  endfor %}    
+	</ul>
+
+</div>
+</body>
+</html>
